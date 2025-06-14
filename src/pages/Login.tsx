@@ -12,7 +12,7 @@ export default function Login() {
 
     const validatePassword = async (ip: string, password: string) => {
         try {
-            const response = await fetch(`http://${ip}:54569/auth?password=${encodeURIComponent(password)}`, {
+            const response = await fetch(`https://${ip}/auth?password=${encodeURIComponent(password)}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
